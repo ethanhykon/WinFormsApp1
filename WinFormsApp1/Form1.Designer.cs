@@ -37,9 +37,6 @@
             lbl_error = new Label();
             lbl_erormail = new Label();
             dataGridView1 = new DataGridView();
-            nom = new DataGridViewTextBoxColumn();
-            email = new DataGridViewTextBoxColumn();
-            supprimer = new DataGridViewButtonColumn();
             grb_contact.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -77,7 +74,7 @@
             txt_email.Name = "txt_email";
             txt_email.Size = new Size(257, 27);
             txt_email.TabIndex = 3;
-            txt_email.TextChanged += txt_email_TextChanged_1;
+            txt_email.TextChanged += txt_email_TextChanged;
             // 
             // lbl_email
             // 
@@ -127,43 +124,19 @@
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nom, email, supprimer });
-            dataGridView1.Location = new Point(555, 44);
+            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridView1.Location = new Point(505, 41);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(576, 305);
+            dataGridView1.Size = new Size(553, 305);
             dataGridView1.TabIndex = 6;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // nom
-            // 
-            nom.HeaderText = "nom/prénom";
-            nom.MinimumWidth = 200;
-            nom.Name = "nom";
-            nom.Width = 200;
-            // 
-            // email
-            // 
-            email.HeaderText = "adresse email";
-            email.MinimumWidth = 200;
-            email.Name = "email";
-            email.Width = 200;
-            // 
-            // supprimer
-            // 
-            supprimer.HeaderText = "supprimer";
-            supprimer.MinimumWidth = 6;
-            supprimer.Name = "supprimer";
-            supprimer.Text = "supprimer";
-            supprimer.ToolTipText = "supprimer";
-            supprimer.UseColumnTextForButtonValue = true;
-            supprimer.Width = 125;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1289, 450);
+            ClientSize = new Size(1089, 450);
             Controls.Add(dataGridView1);
             Controls.Add(grb_contact);
             Name = "Form1";
@@ -186,8 +159,5 @@
         private Label lbl_erormail;
         private Label lbl_error;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn nom;
-        private DataGridViewTextBoxColumn email;
-        private DataGridViewButtonColumn supprimer;
     }
 }
